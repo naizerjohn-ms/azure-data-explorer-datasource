@@ -6,8 +6,6 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/adxauth/adxcredentials"
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/helpers"
 	"github.com/grafana/grafana-azure-sdk-go/v2/azsettings"
 	"github.com/grafana/grafana-azure-sdk-go/v2/azusercontext"
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
@@ -15,9 +13,11 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/resource/httpadapter"
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 	"github.com/grafana/grafana-plugin-sdk-go/experimental/errorsource"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/adxauth/adxcredentials"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/helpers"
 
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/client"
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/models"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/client"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/models"
 
 	// 100% compatible drop-in replacement of "encoding/json"
 	json "github.com/json-iterator/go"

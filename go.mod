@@ -1,4 +1,6 @@
-module github.com/grafana/azure-data-explorer-datasource
+// module github.com/grafana/azure-data-explorer-datasource
+
+module github.com/naizerjohn-ms/azure-data-explorer-datasource
 
 go 1.22
 

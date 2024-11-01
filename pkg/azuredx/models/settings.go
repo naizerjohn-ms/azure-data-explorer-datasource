@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/helpers"
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/helpers"
 )
 
 // DatasourceSettings holds the datasource configuration information for Azure Data Explorer's API

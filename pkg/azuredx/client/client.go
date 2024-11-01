@@ -19,8 +19,8 @@ import (
 	// 100% compatible drop-in replacement of "encoding/json"
 	json "github.com/json-iterator/go"
 
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/helpers"
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/models"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/helpers"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/models"
 )
 
 type AdxClient interface {

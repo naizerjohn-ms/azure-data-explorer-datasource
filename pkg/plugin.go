@@ -3,10 +3,10 @@ package main
 import (
 	"os"
 
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx"
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/datasource"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx"
 )
 
 func main() {

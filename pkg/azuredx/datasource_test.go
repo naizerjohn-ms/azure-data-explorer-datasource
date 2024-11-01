@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/models"
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/models"
 	"github.com/stretchr/testify/require"
 )
 

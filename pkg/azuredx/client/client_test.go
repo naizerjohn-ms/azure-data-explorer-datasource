@@ -7,9 +7,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/models"
 	"github.com/grafana/grafana-azure-sdk-go/v2/azusercontext"
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/models"
 	"github.com/stretchr/testify/require"
 )
 

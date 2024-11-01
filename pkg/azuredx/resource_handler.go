@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/helpers"
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/models"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/helpers"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/models"
 )
 
 func (adx *AzureDataExplorer) registerRoutes(mux *http.ServeMux) {

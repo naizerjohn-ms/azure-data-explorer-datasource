@@ -5,14 +5,15 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/adxauth"
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/models"
 	"github.com/grafana/grafana-azure-sdk-go/v2/azcredentials"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/adxauth"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/models"
+
 	//"github.com/grafana/grafana-azure-sdk-go/v2/azhttpclient"
-	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azhttpclient"
 	"github.com/grafana/grafana-azure-sdk-go/v2/azsettings"
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
+	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azhttpclient"
 )
 
 func newHttpClientAzureCloud(ctx context.Context, instanceSettings *backend.DataSourceInstanceSettings, dsSettings *models.DatasourceSettings, azureSettings *azsettings.AzureSettings, credentials azcredentials.AzureCredentials) (*http.Client, error) {

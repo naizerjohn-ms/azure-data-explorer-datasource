@@ -11,7 +11,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/models"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/models"
 )
 
 func TestResourceHandler(t *testing.T) {

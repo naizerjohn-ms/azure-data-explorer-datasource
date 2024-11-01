@@ -3,7 +3,7 @@ package helpers_test
 import (
 	"testing"
 
-	"github.com/grafana/azure-data-explorer-datasource/pkg/azuredx/helpers"
+	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/helpers"
 )
 
 func Test_SanitizeClusterUri(t *testing.T) {
