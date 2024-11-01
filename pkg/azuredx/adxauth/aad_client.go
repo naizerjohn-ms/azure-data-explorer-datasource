@@ -7,7 +7,9 @@ import (
 	"net/http"
 	"regexp"
 
+	"github.com/Azure/azure-sdk-for-go/sdk/azcore/policy"
 	"github.com/Azure/azure-sdk-for-go/sdk/azcore/runtime"
+	"github.com/Azure/azure-sdk-for-go/sdk/azidentity"
 	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/confidential"
 	"github.com/grafana/grafana-azure-sdk-go/v2/azcredentials"
 	"github.com/grafana/grafana-azure-sdk-go/v2/azsettings"
@@ -30,10 +32,28 @@ func newAADClient(credentials *azcredentials.AzureClientSecretCredentials, httpC
 
 	authority := runtime.JoinPaths(authorityHost, credentials.TenantId)
 
-	clientCredential, err := confidential.NewCredFromSecret(credentials.ClientSecret)
+	// clientCredential, err := confidential.NewCredFromSecret(credentials.ClientSecret)
+	// if err != nil {
+	// 	return nil, err
+	// }
+
+	azScopes := []string{"api://AzureADTokenExchange/.default"}
+
+	mic, err := azidentity.NewManagedIdentityCredential(
+		&azidentity.ManagedIdentityCredentialOptions{
+			ID: azidentity.ClientID(credentials.ClientSecret),
+		},
+	)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("error constructing managed identity credential: %w", err)
 	}
+
+	getAssertion := func(ctx context.Context, _ confidential.AssertionRequestOptions) (string, error) {
+		tk, err := mic.GetToken(ctx, policy.TokenRequestOptions{Scopes: azScopes})
+		return tk.Token, err
+	}
+
+	clientCredential := confidential.NewCredFromAssertionCallback(getAssertion)
 
 	httpClientOpts := confidential.WithHTTPClient(httpClient)
 	client, err := confidential.New(authority, credentials.ClientId, clientCredential, httpClientOpts)
