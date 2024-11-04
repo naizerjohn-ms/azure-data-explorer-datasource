@@ -34,6 +34,8 @@ type AzureDataExplorer struct {
 func NewDatasource(ctx context.Context, instanceSettings backend.DataSourceInstanceSettings) (instancemgmt.Instance, error) {
 	adx := &AzureDataExplorer{}
 
+	return adx, nil
+
 	var jsonData map[string]interface{}
 	err := json.Unmarshal(instanceSettings.JSONData, &jsonData)
 	if err != nil {
