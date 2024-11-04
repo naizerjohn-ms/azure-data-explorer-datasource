@@ -98,9 +98,6 @@ func getHttpClient(ctx context.Context, instanceSettings *backend.DataSourceInst
 	}
 	clientOpts.Timeouts.Timeout = dsSettings.QueryTimeout
 
-	// breaking code change
-	return nil, nil
-
 	azhttpclient.AddAzureAuthentication(&clientOpts, authOpts, credentials)
 
 	httpClient, err := httpclient.NewProvider().New(clientOpts)
