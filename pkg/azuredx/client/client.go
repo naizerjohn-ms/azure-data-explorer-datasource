@@ -10,11 +10,11 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/grafana/grafana-azure-sdk-go/v2/azcredentials"
-	"github.com/grafana/grafana-azure-sdk-go/v2/azsettings"
-	"github.com/grafana/grafana-azure-sdk-go/v2/azusercontext"
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/experimental/errorsource"
+	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azcredentials"
+	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azsettings"
+	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azusercontext"
 
 	// 100% compatible drop-in replacement of "encoding/json"
 	json "github.com/json-iterator/go"

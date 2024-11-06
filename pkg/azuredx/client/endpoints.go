@@ -3,7 +3,7 @@ package client
 import (
 	"fmt"
 
-	"github.com/grafana/grafana-azure-sdk-go/v2/azsettings"
+	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azsettings"
 )
 
 /*

@@ -1,8 +1,8 @@
 package adxcredentials
 
 import (
-	"github.com/grafana/grafana-azure-sdk-go/v2/azcredentials"
-	"github.com/grafana/grafana-azure-sdk-go/v2/azsettings"
+	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azcredentials"
+	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azsettings"
 )
 
 func GetDefaultCredentials(settings *azsettings.AzureSettings) azcredentials.AzureCredentials {

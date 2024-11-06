@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/grafana/grafana-azure-sdk-go/v2/azcredentials"
 	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/adxauth"
 	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/models"
+	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azcredentials"
 
-	"github.com/grafana/grafana-azure-sdk-go/v2/azhttpclient"
-	"github.com/grafana/grafana-azure-sdk-go/v2/azsettings"
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
+	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azhttpclient"
+	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azsettings"
 	//"github.com/naizerjohn-ms/grafana-azure-sdk-go/azhttpclient"
 )
 

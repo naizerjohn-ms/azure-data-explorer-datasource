@@ -6,8 +6,6 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/grafana/grafana-azure-sdk-go/v2/azsettings"
-	"github.com/grafana/grafana-azure-sdk-go/v2/azusercontext"
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/instancemgmt"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/resource/httpadapter"
@@ -15,6 +13,8 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/experimental/errorsource"
 	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/adxauth/adxcredentials"
 	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/helpers"
+	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azsettings"
+	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azusercontext"
 
 	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/client"
 	"github.com/naizerjohn-ms/azure-data-explorer-datasource/pkg/azuredx/models"

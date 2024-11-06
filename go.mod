@@ -9,12 +9,13 @@ toolchain go1.22.5
 require (
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.16.0
 	github.com/AzureAD/microsoft-authentication-library-for-go v1.2.2
-	github.com/grafana/grafana-azure-sdk-go/v2 v2.1.2
 	github.com/grafana/grafana-plugin-sdk-go v0.256.0
 	github.com/json-iterator/go v1.1.12
 	github.com/stretchr/testify v1.9.0
 	golang.org/x/net v0.30.0
 )
+
+require github.com/grafana/grafana-azure-sdk-go/v2 v2.1.2 // indirect
 
 require (
 	github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.7.0
@@ -67,6 +68,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
+	github.com/naizerjohn-ms/grafana-azure-sdk-go v1.0.0
 	github.com/oklog/run v1.1.0 // indirect
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/perimeterx/marshmallow v1.1.5 // indirect
