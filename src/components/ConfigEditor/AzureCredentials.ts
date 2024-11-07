@@ -14,5 +14,7 @@ export function isCredentialsComplete(
     case 'clientsecret':
     case 'clientsecret-obo':
       return !!(credentials.azureCloud && credentials.tenantId && credentials.clientId && credentials.clientSecret);
+    case 'msi-obo':
+      return !!(credentials.azureCloud && credentials.tenantId && credentials.clientId && credentials.managedIdentityClientId);
   }
 }

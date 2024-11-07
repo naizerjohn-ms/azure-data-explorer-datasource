@@ -13,7 +13,6 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
 	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azhttpclient"
 	"github.com/naizerjohn-ms/grafana-azure-sdk-go/azsettings"
-	//"github.com/naizerjohn-ms/grafana-azure-sdk-go/azhttpclient"
 )
 
 func newHttpClientAzureCloud(ctx context.Context, instanceSettings *backend.DataSourceInstanceSettings, dsSettings *models.DatasourceSettings, azureSettings *azsettings.AzureSettings, credentials azcredentials.AzureCredentials) (*http.Client, error) {
