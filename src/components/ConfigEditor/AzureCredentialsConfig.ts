@@ -121,19 +121,6 @@ export function getCredentials(options: DataSourceSettings<AdxDataSourceOptions,
         clientId: credentials.clientId,
         clientSecret: getSecret(options),
       };
-    case 'msi-obo':
-      if (credentials.authType === 'msi-obo' && !getOboEnabled()) {
-        // If authentication type is OBO but OBO were disabled in Grafana config,
-        // then we should fall back to an empty default credentials
-        return getDefaultCredentials();
-      }
-      return {
-        authType: 'msi-obo',
-        azureCloud: credentials.azureCloud || getDefaultAzureCloud(),
-        tenantId: credentials.tenantId,
-        clientId: credentials.clientId,
-        managedIdentityClientId: credentials.managedIdentityClientId,
-      };
   }
 }
 
@@ -265,21 +252,6 @@ export function updateCredentials(
           ...options.secureJsonFields,
           azureClientSecret: credentials.clientSecret === concealed,
           clientSecret: credentials.clientSecret === concealedLegacy,
-        },
-      };
-      break;
-    case 'msi-obo':
-      options = {
-        ...options,
-        jsonData: {
-          ...options.jsonData,
-          azureCredentials: {
-            authType: 'msi-obo',
-            azureCloud: credentials.azureCloud || getDefaultAzureCloud(),
-            tenantId: credentials.tenantId,
-            clientId: credentials.clientId,
-            managedIdentityClientId: credentials.managedIdentityClientId,
-          },
         },
       };
       break;
